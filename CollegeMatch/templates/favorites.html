@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Favorites | CollegeMatch</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/script.js" defer></script>
+</head>
+<body data-page="favorites">
+  <header class="site-header">
+    <a class="brand" href="/"><span class="brand-icon">🎓</span> CollegeMatch</a>
+    <nav class="main-nav" aria-label="Main navigation"><a href="/">Explore</a><a href="/compare">Compare</a><a class="active" aria-current="page" href="/favorites">Favorites</a></nav>
+    <div class="avatar" aria-label="User profile placeholder">CM</div>
+  </header>
+  <main class="page-container">
+    <div class="section-heading favorites-heading"><div><h1>My Favorites</h1><p id="favorites-count" class="muted">Your saved universities will appear here.</p></div><a class="button button-primary" href="/compare" id="compare-favorites">Compare Saved Universities</a></div>
+    <div id="favorites-list" class="favorites-list" aria-live="polite">
+      <div class="empty-state"><h2>No favorites yet</h2><p class="muted">Explore universities and save your favorites to see them here.</p><a class="button button-outline" href="/">Explore Universities</a></div>
+      <!-- JavaScript teammate: replace this empty state with saved university cards. -->
+    </div>
+  </main>
+</body>
+</html>

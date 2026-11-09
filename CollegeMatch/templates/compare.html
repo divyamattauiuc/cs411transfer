@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare Universities | CollegeMatch</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/script.js" defer></script>
+</head>
+<body data-page="compare">
+  <header class="site-header">
+    <a class="brand" href="/"><span class="brand-icon">🎓</span> CollegeMatch</a>
+    <nav class="main-nav" aria-label="Main navigation"><a href="/">Explore</a><a class="active" aria-current="page" href="/compare">Compare</a><a href="/favorites">Favorites</a></nav>
+    <div class="avatar" aria-label="User profile placeholder">CM</div>
+  </header>
+  <main class="page-container">
+    <div class="section-heading"><div><h1>Compare Universities</h1><p class="muted">Review your selected schools side by side.</p></div></div>
+    <div class="selection-bar"><strong>Comparing:</strong><div id="selected-universities" class="chip-list"><span class="muted">No universities selected yet.</span></div><button type="button" id="add-university" class="button button-soft">+ Add University</button></div>
+    <div class="compare-layout">
+      <section class="panel" aria-labelledby="comparison-title">
+        <h2 id="comparison-title">Comparison Metrics</h2>
+        <div class="table-scroll"><table class="comparison-table" id="comparison-table"><thead id="comparison-head"><tr><th scope="col">Metric</th><th scope="col">Select universities to compare</th></tr></thead><tbody id="comparison-body"><tr><th scope="row">In-State Tuition</th><td>—</td></tr><tr><th scope="row">Out-of-State Tuition</th><td>—</td></tr><tr><th scope="row">Acceptance Rate</th><td>—</td></tr><tr><th scope="row">Graduation Rate</th><td>—</td></tr><tr><th scope="row">Student–Faculty Ratio</th><td>—</td></tr><tr><th scope="row">Popular Majors</th><td>—</td></tr></tbody></table></div>
+      </section>
+      <div class="chart-stack">
+        <section class="panel"><h2>Postgraduate Median Earnings (10 Years Out)</h2><div id="earnings-chart" class="chart-placeholder">Earnings chart will appear here.</div></section>
+        <section class="panel"><h2>Annual Tuition Cost Comparison</h2><div id="tuition-chart" class="chart-placeholder">Tuition chart will appear here.</div></section>
+      </div>
+    </div>
+    <p class="muted footnote">Comparison data and charts require JavaScript and backend integration.</p>
+  </main>
+</body>
+</html>

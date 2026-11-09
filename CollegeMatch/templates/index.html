@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Universities | CollegeMatch</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/script.js" defer></script>
+</head>
+<body data-page="explore">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="CollegeMatch home"><span class="brand-icon">🎓</span> CollegeMatch</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" aria-current="page" href="/">Explore</a>
+      <a href="/compare">Compare</a>
+      <a href="/favorites">Favorites</a>
+    </nav>
+    <div class="avatar" aria-label="User profile placeholder">CM</div>
+  </header>
+
+  <div class="explore-layout">
+    <aside class="filter-panel" aria-labelledby="filters-title">
+      <h2 id="filters-title">Filter Selection</h2>
+      <form id="filter-form">
+        <fieldset class="filter-group">
+          <legend>Tuition Type</legend>
+          <div class="segmented">
+            <label><input type="radio" name="tuition_type" value="in-state" checked><span>In-State</span></label>
+            <label><input type="radio" name="tuition_type" value="out-of-state"><span>Out-of-State</span></label>
+          </div>
+        </fieldset>
+        <div class="filter-group">
+          <label for="major-filter">Good For (Major)</label>
+          <select id="major-filter" name="major"><option value="">All Majors</option><option>Computer Science</option><option>Engineering</option><option>Biology</option><option>Business</option><option>Nursing</option></select>
+        </div>
+        <div class="filter-group">
+          <label for="tuition-filter">Maximum Annual Tuition</label>
+          <div class="range-heading"><span>$0</span><output id="tuition-value" for="tuition-filter">$60,000</output></div>
+          <input type="range" id="tuition-filter" name="max_tuition" min="0" max="60000" step="1000" value="60000">
+        </div>
+        <div class="filter-group">
+          <label for="earnings-filter">Minimum Postgraduate Earnings (10yr)</label>
+          <div class="range-heading"><output id="earnings-value" for="earnings-filter">$0</output><span>$140,000</span></div>
+          <input type="range" id="earnings-filter" name="min_earnings" min="0" max="140000" step="5000" value="0">
+        </div>
+        <div class="filter-group">
+          <label for="location-filter">Location (State/Region)</label>
+          <select id="location-filter" name="location"><option value="">All Regions</option><option value="IL">Illinois</option><option value="CA">California</option><option value="MI">Michigan</option><option value="GA">Georgia</option><option value="WA">Washington</option><option value="TX">Texas</option></select>
+        </div>
+        <div class="filter-group">
+          <label for="size-filter">School Size</label>
+          <select id="size-filter" name="size"><option value="">All Sizes</option><option value="small">Small</option><option value="medium">Medium</option><option value="large">Large</option></select>
+        </div>
+        <div class="filter-group">
+          <label for="acceptance-filter">Maximum Acceptance Rate</label>
+          <div class="range-heading"><span>0%</span><output id="acceptance-value" for="acceptance-filter">100%</output></div>
+          <input type="range" id="acceptance-filter" name="max_acceptance" min="0" max="100" step="1" value="100">
+        </div>
+        <div class="filter-actions">
+          <button type="reset" class="button button-outline" id="clear-filters">Clear</button>
+          <button type="submit" class="button button-primary" id="apply-filters">Apply Filters</button>
+        </div>
+      </form>
+    </aside>
+
+    <main class="explore-main">
+      <div class="section-heading"><div><h1>Explore Universities</h1><p class="muted">Discover colleges that fit your goals.</p></div></div>
+      <form id="search-form" class="search-form" role="search">
+        <label class="sr-only" for="search-input">Search university by name</label>
+        <input type="search" id="search-input" name="name" placeholder="Search by university name..." autocomplete="off">
+        <button type="submit" id="search-button" class="button button-primary">Search</button>
+      </form>
+      <div class="results-toolbar">
+        <h2 id="results-count" aria-live="polite">University Results</h2>
+        <label class="sort-control" for="sort-select">Sort by:
+          <select id="sort-select"><option value="best-match">Best Match</option><option value="name">Name (A–Z)</option><option value="tuition-asc">Tuition: Low to High</option></select>
+        </label>
+      </div>
+      <p id="results-status" class="muted" role="status">University results will appear below when the database is connected.</p>
+      <div id="university-results" class="university-grid" aria-live="polite">
+        <!-- JavaScript teammate: insert university cards here using real API data. -->
+      </div>
+    </main>
+  </div>
+</body>
+</html>
